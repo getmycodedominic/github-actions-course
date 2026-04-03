@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: 04-using-actions/react-app
+        working-directory: ./04-using-actions/react-app
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -20,7 +20,3 @@ jobs:
       - name: Run Unit Tests
         run: npm run test
     
-
-    # 0. Checkout code from repository
-    # 1. Install deps of our react application
-    # 2. Execute automated tests
