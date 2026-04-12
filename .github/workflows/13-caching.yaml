@@ -22,7 +22,7 @@ jobs:
               with:
                   node-version: '24.x'
             - name: Run ci
-              run: npm run ci
+              run: npm ci
             - name: Install dependencies
               run: npm run test
             - name: Building
