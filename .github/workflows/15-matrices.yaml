@@ -16,6 +16,7 @@ jobs:
     steps:
       - name: Setup Node
         uses: actions/setup-node@v5
-        with: ${{ matrix.node-version }}
+        with: 
+          node-version: ${{ matrix.node-version }}
       - name: Perform some tests
         run: echo "Running tests on Node.js ${{ matrix.node-version }} on ${{ matrix.os }}"
