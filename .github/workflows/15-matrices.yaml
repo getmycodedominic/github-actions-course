@@ -8,7 +8,7 @@ jobs:
     name: ${{ matrix.os }} ${{ matrix.node-version }}
     runs-on: ${{ matrix.os }}
     strategy:
-      fail-fast: true
+      fail-fast: false
       matrix:
         node-version: [18.x, 20.x, 24.x]
         os: 
@@ -35,7 +35,7 @@ jobs:
       - name: Upload test results
         run: echo "Uploading test results"
   include-example:
-    name: ${{ matrix.color }}-${{ matrix.shape }}-${{ matrix.size }}
+    name: ${{ matrix.color }}-${{ matrix.shape }}-${{ matrix.size }}-${{ matrix.opacity }} 
     runs-on: ubuntu-latest
     strategy:
         matrix:
@@ -43,8 +43,9 @@ jobs:
           shape: [circle, square]
           size: [small, large]
           include:
+            - opacity: 50
             - color: red
               shape: triangle
     steps:
       - name: Dummy step
-        run: echo "Running example for ${{ matrix.color }}-${{ matrix.shape }}-${{ matrix.size }}"
+        run: echo "Running example for ${{ matrix.color }}-${{ matrix.shape }}-${{ matrix.size }}-${{ matrix.opacity }}"
