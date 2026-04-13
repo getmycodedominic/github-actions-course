@@ -51,8 +51,4 @@ jobs:
             name: ${{ env.build-artifact-key }}
             path: build
         - name: Show folder structure
-          run: ls -R 
-<<<<<<< HEAD
-=======
-          
->>>>>>> refs/remotes/origin/main
+          run: ls -R
