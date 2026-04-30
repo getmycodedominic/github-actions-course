@@ -17,9 +17,14 @@ inputs:
     description: Authentication token with repository access. Must have write access to contents and pull-requests.
     required: true
     default: 'false'
+  debug:
+    description: Wheather the output debug messages to the console
+    default: 'false'
+
+outputs:
+    updates-available:
+      description: Whether there are updates available.
 
 runs:
   using: node20
   main: dist/index.js
-
-  
