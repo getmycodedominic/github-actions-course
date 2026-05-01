@@ -4,7 +4,7 @@ on:
     workflow_dispatch:
 
 jobs:
-    ping: 
+    ping-with-concurrency: 
         runs-on: ubuntu-latest
         concurrency:
             group: ${{ github.workflow }}-${{ github.ref }}
@@ -19,6 +19,7 @@ jobs:
             url: https://www.invalid-jkhlkjhlgtfi7tyugiltuytgpjolkjkhkhjvgdtrge.com
             max_trials: 20
             delay: 5
+    
     ping-without-concurrency:
       runs-on: ubuntu-latest
       steps:
