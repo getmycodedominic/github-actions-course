@@ -1,0 +1,11 @@
+name: Safe Title Check
+description: Safely check the title of a PR
+
+inputs:
+  pr-title:
+    description: The title of the PR
+    required: true
+
+runs:
+  using: node24
+  main: index.js
