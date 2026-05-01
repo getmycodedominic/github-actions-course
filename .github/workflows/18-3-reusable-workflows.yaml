@@ -9,5 +9,5 @@ jobs:
       with:
         target-directory: dummy-dir
     e2e-test:
-      uses: getmycodedominic/Github-actions-course-example-e2e/.github/workflows/e2e.yaml@main
+      uses: getmycodedominic/github-actions-course-example-e2e/.github/workflows/e2e.yaml@main
     
